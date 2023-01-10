@@ -8,6 +8,7 @@ defmodule Spotify.Helpers do
   @doc """
   Converts a map of string keys to a map of atoms and turns it into a struct
   """
+  def to_struct(kind, nil), do: struct(kind)
   def to_struct(kind, attrs) do
     struct = struct(kind)
 
